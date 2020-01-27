@@ -18,7 +18,7 @@ var sync_callback = function() {
 var td = new Treasure({
     host: 'in.treasuredata.com',
     writeKey: '9265/d4a94f4730be45ab1d6248491444b38c08fe240f',
-    database: 'kadokawadwango'
+    database: document.domain.replace(".net","")
   });
 
 td.set('$global', 'td_global_id', 'td_global_id');
@@ -26,5 +26,5 @@ td.set('$global', 'td_global_id', 'td_global_id');
     // Enable click tracking
  td.trackClicks();
   
-td.trackPageview('kadokawadwango_all',sync_callback);
+td.trackPageview(document.domain.replace(".net","_all"),sync_callback);
 </script>
